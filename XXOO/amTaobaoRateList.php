@@ -8,7 +8,7 @@
  * 说明:通过手机触屏版AJAX返回的数据http://a.m.taobao.com/ajax/rate_list.do?item_id={}&rateRs=1&p=1&ps=10
  */
 
-class amTaobaoRateList extends xxooTao
+class amTaobaoRateList extends xoTao
 {
 	/** 
 	 * 商品的数字id

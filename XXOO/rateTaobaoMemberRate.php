@@ -19,7 +19,7 @@ callback:shop_rate_list
 * 
  */
 
-class rateTaobaoMemberRate extends xxooTao
+class rateTaobaoMemberRate extends xoTao
 {
 	/** 
 	 * 用户的数字id
@@ -35,13 +35,12 @@ class rateTaobaoMemberRate extends xxooTao
 	
 				
 	public function exec(){
+		exit("JSON暂未解决");
 		$resp=$this->curl("http://rate.taobao.com/member_rate.htm?content=1&result=&from=rate&user_id={$this->userId}&identity=1&rater=1&direction=0&callback=shop_rate_list");
-//echo trim($resp);
-//$resp=trim($resp);
-//$resp=str_replace('shop_rate_list(','',$resp);
-//$resp=substr($resp,0,-1);
-//echo $resp;
-		$respObject = $this->_json_decode(trim($resp),TRUE);
-			var_dump($respObject);	
+$resp=iconv('GBK','UTF-8',$resp);
+echo $resp;
+
+		$respObject = json_deocde(trim($resp),TRUE);
+
 	}
 	}

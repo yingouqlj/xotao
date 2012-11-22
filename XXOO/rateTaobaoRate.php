@@ -8,7 +8,7 @@
  * 说明:http://rate.taobao.com/rate.htm?spm=a1z02.1.1000291.d1000296.TSeauy&userId=49093952
  */
 
-class rateTaobaoRate extends xxooTao
+class rateTaobaoRate extends xoTao
 {
 	/** 
 	 * 用户的数字id
